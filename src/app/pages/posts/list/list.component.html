@@ -1,0 +1,27 @@
+<div class="table-responsive">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">userId</th>
+            <th class="d-none d-sm-block" scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-info" *ngFor="let item of posts">
+            <th scope="row">{{item.id}}</th>
+            <td>{{item.title}}</td>
+            <td>{{item.userId}}</td>
+            <td class="btn-group d-none d-sm-block" role="group">
+                <button type="button" class="btn btn-outline-warning m-1" (click)="onEdit(item)">Edit</button>
+                <button type="button" class="btn btn-outline-warning m-1" (click)="onSee(item)">See</button>
+                <button type="button" class="btn btn-outline-danger m-1" (click)="onDelete(item)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-12 mt-5 container-notFound" *ngIf="posts.length <= 0">
+  <p>Results of </p>
+</div>

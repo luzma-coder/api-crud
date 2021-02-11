@@ -1,0 +1,26 @@
+<div class="card mt-2">
+    <div class="card-header">
+        Post Details
+    </div>
+    <div class="card-body">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                Id: <h5>{{post.id}}</h5>
+            </li>
+            <li class="list-group-item">
+                Tittle: <h5>{{post.title}}</h5>
+            </li>
+            <li class="list-group-item">
+                Body: <h5>{{post.body}}</h5>
+            </li>
+            <li class="list-group-item">
+                UserId: <h5>{{post.userId}}</h5>
+            </li>            
+        </ul>
+    </div>
+    <div class="btn-group" role="group">
+        <button type="button" class="btn btn-outline-warning m-1 btn-sm" (click)="onEdit()">Edit</button>
+        <button type="button" class="btn btn-outline-danger m-1 btn-sm" (click)="onDelete()">Delete</button>
+    </div>
+</div>
+<button type="button" class="btn btn-secondary mt-2" (click)="onBackToList()">Go Back to List</button>
